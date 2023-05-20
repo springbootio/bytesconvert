@@ -7,7 +7,31 @@
     <groupId>io.github.springbootio</groupId>
     <artifactId>bytesconvert</artifactId>
     <version>1.0.0</version>
+    <description>bytes convert</description>
+    <url>http://github.com/springbootio/bytesconvert</url>
 
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>springbootio</name>
+            <email>springbootio</email>
+            <organization>springbootio</organization>
+            <organizationUrl>springbootio</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/springbootio/bytesconvert.git</connection>
+        <developerConnection>scm:git:ssh://github.com:springbootio/bytesconvert.git</developerConnection>
+        <url>http://github.com/springbootio/bytesconvert/tree/main</url>
+    </scm>
+         
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -27,12 +51,6 @@
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
-    <scm>
-        <connection>scm:git:git://github.com/springbootio/bytesconvert.git</connection>
-        <developerConnection>scm:git:ssh://github.com:springbootio/bytesconvert.git</developerConnection>
-        <url>http://github.com/springbootio/bytesconvert/tree/main</url>
-    </scm>
 
     <build>
         <plugins>
