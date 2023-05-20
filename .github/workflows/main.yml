@@ -41,7 +41,6 @@ jobs:
           cat <(echo -e "${{ secrets.GPG_PRIVATE_KEY }}") | gpg --batch --import
       - name: Deploy
         run: |
-          export GPG_TTY=$(tty);
           mvn -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -s release/m2-settings.xml clean deploy
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
