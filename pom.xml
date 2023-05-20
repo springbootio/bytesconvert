@@ -7,6 +7,8 @@
     <groupId>io.github.springbootio</groupId>
     <artifactId>bytesconvert</artifactId>
     <version>1.0.0</version>
+    <packaging>jar</packaging>
+
     <name>bytes convert</name>
     <description>bytes convert</description>
     <url>http://github.com/springbootio/bytesconvert</url>
