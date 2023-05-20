@@ -10,7 +10,7 @@ on:
       logLevel:
         description: 'Log level'
         required: true
-        default: 'warning'
+        default: 'info'
         type: choice
         options:
         - info
@@ -41,10 +41,7 @@ jobs:
           cat <(echo -e "${{ secrets.GPG_PRIVATE_KEY }}") | gpg --batch --import
       - name: Deploy
         run: |
-          mvn -P gpg_verify \
-            --no-transfer-progress \
-            --batch-mode -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} \
-            --file pom.xml -s release/m2-settings.xml verify deploy
+          mvn -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -s release/m2-settings.xml clean deploy
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
